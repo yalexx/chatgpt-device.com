@@ -3,129 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT Hardware Device — Run AI Like ChatGPT on Your Own Hardware</title>
-<meta name="description" content="Want ChatGPT-level AI on your own hardware? ClawBox runs local LLMs + cloud APIs. Private, always-on, no subscription to us.">
-<meta name="keywords" content="chatgpt hardware, chatgpt device, own chatgpt, private chatgpt, chatgpt alternative hardware, local chatgpt, chatgpt at home">
-<meta name="robots" content="index, follow">
+<title>ChatGPT Device — Run AI Locally on Your Own Hardware</title>
+<meta name="description" content="Guides to running ChatGPT-like AI on your own hardware. Local alternatives, cost analysis, and setup tutorials for home AI servers.">
+<meta name="keywords" content="run ChatGPT locally, ChatGPT hardware, self hosted ChatGPT, local AI models, ChatGPT alternatives">
 <link rel="canonical" href="https://chatgpt-device.com/">
-<meta property="og:title" content="ChatGPT Hardware Device — Run AI Like ChatGPT on Your Own Hardware">
-<meta property="og:description" content="Want ChatGPT-level AI on your own hardware? ClawBox runs local LLMs + cloud APIs. Private, always-on, no subscription to us.">
+<meta property="og:title" content="ChatGPT Device — Run AI Locally on Your Own Hardware">
+<meta property="og:description" content="Guides to running ChatGPT-like AI on your own hardware.">
 <meta property="og:url" content="https://chatgpt-device.com/">
-<meta property="og:image" content="https://openclawhardware.dev/clawbox-3.webp">
-<meta property="og:type" content="product">
+<meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ChatGPT Hardware Device — Run AI Like ChatGPT on Your Own Hardware">
-<meta name="twitter:description" content="Want ChatGPT-level AI on your own hardware? ClawBox runs local LLMs + cloud APIs. Private, always-on, no subscription to us.">
-<meta name="twitter:image" content="https://openclawhardware.dev/clawbox-3.webp">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"ClawBox","description":"Want ChatGPT-level AI on your own hardware? ClawBox runs local LLMs + cloud APIs. Private, always-on, no subscription to us.","brand":{"@type":"Brand","name":"ClawBox"},"image":"https://openclawhardware.dev/clawbox-3.webp","url":"https://openclawhardware.dev/","offers":{"@type":"Offer","price":"549","priceCurrency":"EUR","availability":"https://schema.org/InStock"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is ClawBox like having my own ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"Better — it runs 24/7, automates tasks, manages email, controls smart home. ChatGPT just chats. ClawBox acts."}},
-{"@type":"Question","name":"Can it use the real ChatGPT/GPT-4?","acceptedAnswer":{"@type":"Answer","text":"Yes! Bring your OpenAI API key. Also supports Claude, Gemini. Use the best model for each task."}},
-{"@type":"Question","name":"How much does cloud AI cost on top?","acceptedAnswer":{"@type":"Answer","text":"Typically €5-20/month for API usage. Many tasks run on free local models. No subscription to us — ever."}}]}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#0a0f1a;color:#e0e0e0;min-height:100vh;line-height:1.7}
-.hero{padding:60px 20px 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.hero-text h1{font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;font-weight:800;line-height:1.15;margin-bottom:16px}
-.hero-text h1 span{background:linear-gradient(135deg,#059669,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-text .subtitle{font-size:1.1rem;color:#9ca3af;margin-bottom:24px;line-height:1.6}
-.hero-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
-.btn-primary{display:inline-block;padding:16px 32px;background:linear-gradient(135deg,#059669,#34d399);color:#fff;text-decoration:none;border-radius:12px;font-size:1.1rem;font-weight:700;transition:transform .2s,box-shadow .2s}
-.btn-primary:hover{transform:scale(1.05);box-shadow:0 8px 30px #05966944}
-.btn-secondary{display:inline-block;padding:16px 32px;color:#34d399;text-decoration:none;border:1px solid #05966944;border-radius:12px;font-size:1rem;font-weight:600;transition:all .2s}
-.btn-secondary:hover{background:#05966911}
-.hero-micro{font-size:.85rem;color:#6b7280}
-.hero-micro span{color:#22c55e;font-weight:600}
-.hero-image{text-align:center}
-.hero-image img{max-width:100%;height:auto;border-radius:16px;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))}
-.trust-bar{background:#121a2e;border-top:1px solid #05966922;border-bottom:1px solid #05966922;padding:16px 20px;text-align:center}
-.trust-bar .items{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:.85rem;color:#9ca3af}
-.section{max-width:1000px;margin:0 auto;padding:80px 20px}
-.section-title{font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;font-weight:800;margin-bottom:12px;text-align:center}
-.section-sub{color:#9ca3af;font-size:1.05rem;margin-bottom:40px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.feature{background:#121a2e;border-radius:14px;padding:28px;border:1px solid #05966922;transition:border-color .2s}
-.feature:hover{border-color:#05966955}
-.feature .icon{font-size:1.8rem;margin-bottom:12px}
-.feature h3{color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.feature p{color:#9ca3af;font-size:.9rem;line-height:1.6}
-.proof{background:#121a2e;border-radius:16px;padding:48px 32px;border:1px solid #05966922}
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:32px}
-.review{background:#0a0f1a;border-radius:12px;padding:24px;border:1px solid rgba(255,255,255,0.05)}
-.review .stars{color:#34d399;margin-bottom:8px;font-size:1.1rem}
-.review p{color:#d1d5db;font-size:.95rem;font-style:italic;margin-bottom:12px;line-height:1.6}
-.review cite{color:#6b7280;font-size:.85rem;font-style:normal}
-.faqs{max-width:700px;margin:0 auto}
-.faq{background:#121a2e;border-radius:12px;padding:24px;margin-bottom:12px;border:1px solid #05966922}
-.faq h3{color:#fff;font-size:1rem;font-weight:700;margin-bottom:8px}
-.faq p{color:#9ca3af;font-size:.9rem;line-height:1.6}
-.cta-box{text-align:center;background:linear-gradient(135deg,#05966922,#34d39911);border:1px solid #05966933;border-radius:20px;padding:48px 32px;margin:40px auto;max-width:600px}
-.cta-box h2{color:#fff;font-size:1.8rem;font-weight:800;margin-bottom:12px}
-.cta-box p{color:#9ca3af;margin-bottom:24px}
-.cta-box .price{font-size:2rem;color:#fff;font-weight:800;margin-bottom:8px}
-.cta-box .price-sub{font-size:.85rem;color:#6b7280;margin-bottom:24px}
-footer{text-align:center;padding:40px 20px;color:#6b7280;font-size:.8rem;border-top:1px solid rgba(255,255,255,0.05)}
-footer a{color:#34d399;text-decoration:none}
-@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center}.hero-cta{justify-content:center}.hero-image{order:-1}}
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--accent:#14b8a6;--bg:#0a0f1a;--bg2:#111827;--bg3:#1f2937;--text:#f1f5f9;--muted:#94a3b8;--border:#1e293b;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-size:1.3rem;font-weight:800;color:var(--accent);}
+nav a{margin-left:1.5rem;color:var(--muted);font-size:.9rem;}nav a:hover{color:var(--text);}
+.hero{background:linear-gradient(135deg,#0a0f1a 0%,#001a18 100%);padding:5rem 2rem;text-align:center;border-bottom:1px solid var(--border);}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.2;margin-bottom:1rem;}
+.hero h1 span{color:var(--accent);}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:600px;margin:0 auto;}
+.badge{display:inline-block;background:rgba(20,184,166,.15);color:var(--accent);padding:.3rem .8rem;border-radius:99px;font-size:.8rem;font-weight:600;margin-bottom:1rem;border:1px solid rgba(20,184,166,.3);}
+.container{max-width:1200px;margin:0 auto;padding:3rem 2rem;}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+h2.section-title{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;}
+.article-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:border-color .2s;}
+.article-card:hover{border-color:var(--accent);}
+.article-card .tag{font-size:.75rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem;}
+.article-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem;}
+.article-card p{color:var(--muted);font-size:.9rem;}
+.article-card .meta{font-size:.8rem;color:var(--muted);margin-top:.8rem;}
+.featured{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-bottom:2rem;}
+.featured .label{font-size:.75rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
+.featured h2{font-size:1.6rem;font-weight:800;margin-bottom:.5rem;}
+.featured .meta{color:var(--muted);font-size:.85rem;margin-bottom:1.5rem;}
+.featured-body h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--accent);}
+.featured-body p{color:#cbd5e1;margin-bottom:1rem;font-size:.95rem;}
+.featured-body ul,ol{color:#cbd5e1;font-size:.95rem;padding-left:1.5rem;margin-bottom:1rem;}
+.featured-body li{margin-bottom:.4rem;}
+.cost-box{background:var(--bg3);border-radius:8px;padding:1rem 1.5rem;margin:1rem 0;}
+.cost-box .label{font-size:.8rem;color:var(--muted);margin-bottom:.3rem;}
+.cost-box .value{font-size:1.2rem;font-weight:700;color:var(--accent);}
+.cost-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--border);}
+.cost-row:last-child{border-bottom:none;}
+.sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;}
+.sidebar-card h3{font-size:1rem;font-weight:700;margin-bottom:1rem;}
+.hw-item{padding:.8rem 0;border-bottom:1px solid var(--border);}
+.hw-item:last-child{border-bottom:none;}
+.hw-item .hw-name{font-weight:600;font-size:.9rem;}
+.hw-item .hw-desc{font-size:.8rem;color:var(--muted);}
+.hw-item .hw-price{font-size:.85rem;color:var(--accent);font-weight:600;}
+.faq-section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2rem;margin-top:2rem;}
+.faq-section h2{font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;}
+.faq-item{margin-bottom:1.5rem;}
+.faq-item h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--accent);}
+.faq-item p{font-size:.9rem;color:var(--muted);}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.85rem;}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Blog","name":"ChatGPT Device","url":"https://chatgpt-device.com","description":"Guides to running AI on your own hardware"},
+    {"@type":"BlogPosting","headline":"How to Run ChatGPT on Your Own Hardware","url":"https://chatgpt-device.com/#featured","datePublished":"2026-01-20","author":{"@type":"Person","name":"ChatGPT Device Editorial"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Is locally-run AI as good as ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"For many everyday tasks, open models like Llama 3.1 8B or Mistral 7B are excellent. They're fast, private, and free to run. For complex reasoning, coding, or nuanced writing, GPT-4o and Claude Sonnet still have an edge — but that gap is closing fast."}},
+      {"@type":"Question","name":"What hardware do I need to run AI locally?","acceptedAnswer":{"@type":"Answer","text":"Minimum: 8GB RAM for 3B models, 16GB for 7B models. For good performance (10+ tokens/second), you want either a GPU with 8GB+ VRAM or a dedicated AI appliance with an NPU like the NVIDIA Jetson Orin."}}
+    ]}
+  ]
+}
+</script>
 </head>
 <body>
+<header>
+  <div class="logo">💬 ChatGPT Device</div>
+  <nav><a href="#articles">Guides</a><a href="#cost">Cost Analysis</a><a href="#faq">FAQ</a></nav>
+</header>
 <section class="hero">
-<div class="hero-text">
-<h1>Your Own <span>ChatGPT Device</span></h1>
-<p class="subtitle">Want ChatGPT-level AI on your own hardware? ClawBox runs local LLMs + cloud APIs. Private, always-on, no subscription to us.</p>
-<div class="hero-cta">
-<a href="https://openclawhardware.dev" class="btn-primary">Buy ClawBox — €549</a>
-<a href="https://openclawhardware.dev/faq" class="btn-secondary">Learn More</a>
-</div>
-<p class="hero-micro"><span>✓ 30-day money-back guarantee</span> · Free shipping available · No subscriptions</p>
-</div>
-<div class="hero-image">
-<img src="https://openclawhardware.dev/clawbox-3.webp" alt="ClawBox AI Hardware Device" width="500" height="400" loading="eager">
-</div>
+  <div class="badge">Privacy-First AI</div>
+  <h1>Run <span>ChatGPT-Like AI</span><br>on Your Own Hardware</h1>
+  <p>You don't need to pay monthly fees or share your data. Modern open AI models are remarkable — here's how to run them yourself.</p>
 </section>
-<div class="trust-bar"><div class="items"><span>⚡ 67 TOPS AI</span><span>💾 512GB NVMe</span><span>🔌 20W Power</span><span>🛡️ Carbon Fiber</span><span>💰 €549 One-Time</span></div></div>
-<section class="section">
-<h2 class="section-title">Why ClawBox?</h2>
-<p class="section-sub">Everything you need for private, always-on AI — in one beautiful box.</p>
-<div class="features"><div class="feature"><div class="icon">🧠</div><h3>Local + Cloud AI</h3><p>Llama 8B runs locally for privacy. GPT-4, Claude, Gemini via API for complex reasoning. Best of both.</p></div>
-<div class="feature"><div class="icon">🔒</div><h3>Private Conversations</h3><p>Local AI processes sensitive data. Cloud APIs only for non-private tasks you choose.</p></div>
-<div class="feature"><div class="icon">⚡</div><h3>Always Available</h3><p>No rate limits, no downtime, no 'ChatGPT is at capacity'. Your device, your access.</p></div>
-<div class="feature"><div class="icon">🤖</div><h3>Does More Than Chat</h3><p>Automates browser, manages email, controls smart home, runs scripts. A real AI employee.</p></div>
-<div class="feature"><div class="icon">💬</div><h3>Same Interface</h3><p>Chat naturally via Telegram, WhatsApp, or web. Send voice messages, get voice replies.</p></div>
-<div class="feature"><div class="icon">💰</div><h3>Save €240+/Year</h3><p>ChatGPT Plus: €240/yr. ClawBox: €549 once. Break even in ~2 years, then it's free.</p></div></div>
-</section>
-<section class="section">
-<div class="proof">
-<h2 class="section-title" style="margin-bottom:32px">What Customers Say</h2>
-<div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>"Best tech purchase I've made in years. The AI runs 24/7 and barely uses any power."</p><cite>— Marco P., Italy</cite></div>
-<div class="review"><div class="stars">★★★★★</div><p>"Setup was genuinely 5 minutes. Now it manages my emails and smart home. Incredible."</p><cite>— Sarah K., Germany</cite></div>
-<div class="review"><div class="stars">★★★★★</div><p>"Finally, private AI that actually works. No more sending my data to the cloud."</p><cite>— James L., UK</cite></div></div>
+<div class="container">
+  <div class="grid">
+    <main>
+      <div class="featured">
+        <div class="label">📌 Featured Guide</div>
+        <h2>How to Run ChatGPT on Your Own Hardware</h2>
+        <div class="meta">January 20, 2026 · 10 min read · Setup Guides</div>
+        <div class="featured-body">
+          <p>ChatGPT changed how people think about AI. But here's something many users don't realize: the underlying technology — large language models — is now available as open-source software you can run yourself. Not a watered-down version; serious models that handle most everyday tasks just as well.</p>
+
+          <h3>What "Running ChatGPT Locally" Actually Means</h3>
+          <p>You can't literally run ChatGPT — OpenAI's model weights aren't public. But you can run models that are comparable in capability for most use cases: Meta's Llama 3.1, Mistral, Google's Gemma 2, Microsoft's Phi-3, and many others. These models are free, open-source, and run entirely on your hardware.</p>
+          <p>The experience through a good interface like Open WebUI is nearly identical to ChatGPT: you type a message, the AI responds. The difference is everything happens on your machine — your questions never leave your network.</p>
+
+          <h3>What You Need</h3>
+          <ul>
+            <li><strong>Hardware:</strong> Any modern computer with 8GB+ RAM (for small models) or dedicated AI hardware for better performance</li>
+            <li><strong>Software:</strong> Ollama (model management) + Open WebUI (chat interface) — both free, both run on Mac/Windows/Linux</li>
+            <li><strong>Models:</strong> Pull them with one command: <code>ollama pull llama3.1</code></li>
+            <li><strong>Time:</strong> About 30-60 minutes for first-time setup</li>
+          </ul>
+
+          <h3>Step-by-Step Setup</h3>
+          <p><strong>Step 1:</strong> Install Ollama from ollama.com. It handles all the complexity of running LLMs — model downloads, quantization, serving.</p>
+          <p><strong>Step 2:</strong> Pull a model. For a capable generalist: <code>ollama pull llama3.1:8b</code> (5GB download). For a faster, lighter option: <code>ollama pull phi3:mini</code> (2.3GB).</p>
+          <p><strong>Step 3:</strong> Install Open WebUI via Docker: <code>docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main</code></p>
+          <p><strong>Step 4:</strong> Open <code>localhost:3000</code> in your browser. You'll see a ChatGPT-style interface connected to your local models.</p>
+
+          <h3>Performance Expectations</h3>
+          <p>On a modern laptop (Apple M2, Intel Core Ultra): expect 8-15 tokens/second with 8B models — fast enough for comfortable conversation. On a Raspberry Pi 4: 1-2 tok/s, usable but slow. On dedicated AI hardware like the Jetson Orin Nano Super (used in devices like ClawBox): 15+ tok/s at only 20W of power — ideal for always-on use.</p>
+
+          <h3>Which Local Model Should You Start With?</h3>
+          <ul>
+            <li><strong>Best general use:</strong> Llama 3.1 8B — excellent at writing, Q&A, summarization, basic coding</li>
+            <li><strong>Best coding:</strong> CodeLlama 7B or DeepSeek Coder 6.7B</li>
+            <li><strong>Best for older/slower hardware:</strong> Phi-3 Mini (3.8B) — surprisingly capable for its size</li>
+            <li><strong>Best for multilingual:</strong> Mistral 7B — strong across European and Asian languages</li>
+          </ul>
+
+          <h3>The Privacy Difference</h3>
+          <p>When you use ChatGPT, your conversations are logged and potentially used to improve OpenAI's models. Anything sensitive you share — medical questions, legal concerns, business strategy, personal situations — goes to a third-party server. Local AI eliminates this entirely. Your conversations stay on your device, period.</p>
+
+          <h3>When to Still Use Cloud AI</h3>
+          <p>Local 8B models are good, not magic. For genuinely complex reasoning tasks — multi-step math, advanced coding, subtle writing — GPT-4o and Claude Sonnet are still significantly better. Many power users run local AI for routine tasks (quick questions, drafts, summaries) and use cloud APIs for the heavy lifting, getting the best of both worlds at minimal cost.</p>
+        </div>
+      </div>
+
+      <div id="articles">
+        <h2 class="section-title">More Guides</h2>
+        <div class="article-card">
+          <div class="tag">Alternatives</div>
+          <h3>ChatGPT Alternatives You Can Self-Host in 2026</h3>
+          <p>A curated comparison of open-source LLMs that genuinely compete with ChatGPT for everyday tasks. We cover Llama 3.1, Mistral 7B, Phi-3, Gemma 2, Qwen 2.5, and DeepSeek — with honest notes on where each excels and where it falls short.</p>
+          <div class="meta">February 5, 2026 · 8 min read</div>
+        </div>
+        <div class="article-card" id="cost">
+          <div class="tag">Cost Analysis</div>
+          <h3>Local vs Cloud AI: Real Cost Analysis for 2026</h3>
+          <p>ChatGPT Plus costs €20/month. Claude Pro is €18/month. What does self-hosting actually cost in comparison? We break down hardware amortization, electricity, and API costs for three usage profiles: casual user, power user, and small team.</p>
+          <div class="meta">January 30, 2026 · 7 min read</div>
+        </div>
+      </div>
+
+      <div class="faq-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Is locally-run AI as good as ChatGPT?</h3>
+          <p>For many everyday tasks, models like Llama 3.1 8B are excellent. They handle writing, Q&A, coding, and summaries well. For complex reasoning, GPT-4o and Claude still have an edge — but that gap is closing rapidly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What hardware do I need?</h3>
+          <p>Minimum: 8GB RAM for 3B models, 16GB for 7B models. For good speed (10+ tok/s), you want a GPU with 8GB+ VRAM or a dedicated AI appliance with an NPU.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use my local AI from my phone?</h3>
+          <p>Yes — Ollama's API is accessible on your local network. Apps like Enchanted (iOS) and various Android clients can connect to your home AI server. Some setups use Tailscale VPN to access from anywhere.</p>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <div class="sidebar-card">
+        <h3>🖥️ Recommended Hardware</h3>
+        <div class="hw-item">
+          <div class="hw-name">ClawBox</div>
+          <div class="hw-desc">Pre-configured AI appliance. Runs Llama, Whisper voice, browser automation. No setup required — just plug in and start chatting.</div>
+          <div class="hw-price">€549 · openclawhardware.dev</div>
+        </div>
+        <div class="hw-item">
+          <div class="hw-name">Any Modern PC/Mac</div>
+          <div class="hw-desc">8GB RAM minimum. Use Ollama + Open WebUI. Works, but not always-on and uses 45-100W.</div>
+          <div class="hw-price">What you already have</div>
+        </div>
+        <div class="hw-item">
+          <div class="hw-name">NVIDIA RTX 3060</div>
+          <div class="hw-desc">12GB VRAM — excellent for local inference at 50+ tok/s. Desktop GPU.</div>
+          <div class="hw-price">~€280-320</div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h3>💡 Cost Comparison</h3>
+        <div class="cost-row"><span>ChatGPT Plus/year</span><span style="color:var(--accent)">€240</span></div>
+        <div class="cost-row"><span>Claude Pro/year</span><span style="color:var(--accent)">€216</span></div>
+        <div class="cost-row"><span>Local hardware (once)</span><span style="color:#10b981">€80-549</span></div>
+        <div class="cost-row"><span>Electricity/year (20W)</span><span style="color:#10b981">~€10</span></div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:.8rem;">Self-hosted breaks even in 4-18 months depending on usage.</p>
+      </div>
+    </aside>
+  </div>
 </div>
-</section>
-<section class="section">
-<h2 class="section-title">Frequently Asked Questions</h2>
-<p class="section-sub">Got questions? We've got answers.</p>
-<div class="faqs"><div class="faq"><h3>Is ClawBox like having my own ChatGPT?</h3><p>Better — it runs 24/7, automates tasks, manages email, controls smart home. ChatGPT just chats. ClawBox acts.</p></div>
-<div class="faq"><h3>Can it use the real ChatGPT/GPT-4?</h3><p>Yes! Bring your OpenAI API key. Also supports Claude, Gemini. Use the best model for each task.</p></div>
-<div class="faq"><h3>How much does cloud AI cost on top?</h3><p>Typically €5-20/month for API usage. Many tasks run on free local models. No subscription to us — ever.</p></div></div>
-</section>
-<section class="section">
-<div class="cta-box">
-<h2>Ready to Own Your AI?</h2>
-<div class="price">€549</div>
-<p class="price-sub">One-time purchase · No subscriptions · 30-day money-back guarantee</p>
-<a href="https://openclawhardware.dev" class="btn-primary">Order ClawBox Now</a>
-<p style="margin-top:16px;font-size:.85rem;color:#6b7280">Ships from EU via DHL Express · Worldwide delivery</p>
-</div>
-</section>
-<footer>
-<p>ClawBox by <a href="https://openclawhardware.dev">OpenClaw Hardware</a> · NVIDIA Jetson Orin Nano · Made with ❤️ in Bulgaria</p>
-<p style="margin-top:8px"><a href="https://openclawhardware.dev/faq">FAQ</a> · <a href="https://openclawhardware.dev/shipping">Shipping</a> · <a href="https://discord.gg/FbKmnxYnpq">Discord</a> · <a href="mailto:yanko@idrobots.com">Contact</a></p>
-</footer>
-</body>
-</html>
+<footer><p>© 2026 ChatGPT Device · Practical guides to local AI · <a href="mailto:hello@chatgpt-device.com">Contact</a></p></footer>
+</body></html>
