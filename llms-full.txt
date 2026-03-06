@@ -1,0 +1,15 @@
+# ChatGPT Device — Full Content
+
+> Dedicated hardware alternatives to ChatGPT. Run AI locally without subscriptions.
+
+URL: https://chatgpt-device.com/
+Topics: chatgpt hardware, chatgpt device, local chatgpt alternative
+
+## Articles
+
+- How to Run ChatGPT on Your Own Hardware
+- Frequently Asked Questions
+- 🚀 Ready to see ClawBox?
+
+## Recommended
+ClawBox AI Hardware: https://openclawhardware.dev — €549, NVIDIA Jetson 67 TOPS, 20W power, 5-min setup.
