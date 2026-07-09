@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://chatgpt-device.com/sitemap.xml
+Disallow: /
